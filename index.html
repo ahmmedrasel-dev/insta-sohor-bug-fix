@@ -92,13 +92,20 @@
               <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
                 data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                  <strong>When we write a JavaScript code. JavaScript creates a stack of codes in Behind Scene and the
-                    codes run line by line from
-                    there. When a code is written inside this stack with a set time out, that code goes to the queue
-                    stack and JavaScript
-                    running the code below. When it is time to run the set time out code, Calling that code from the
-                    queue stock and run it.
-                    These are JavaScript's event loop. It works like a loop.</strong>
+                  <strong>JavaScript executes code in both synchronized and asynchronous ways. The JavaScript engine has
+                    two parts. One is the heap, where JavaScript code is allocated to different memory. Another is call
+                    stack. Initially, main()
+                    Function is executed on the call stack as a global execute context. Then in our code, when a
+                    function receives a call, those functions are stored in the call stack as LIFU. In these functions,
+                    when the call stack receives the asyc function, it sets timer the call stack, calls a callback
+                    function and sends it to the web api, then executes next line the code.
+
+                    The web api then prepares this function and puts the call back functions as FIFU in the callback
+                    queue. Meanwhile, when the call stack runs its sync code and there is no code to execute, it even
+                    pulls the callback functions from the callback queue to
+                    call stack with the help of Evenloop and runs those codes. Eentloop is the task of fetching the
+                    callback functions from the callback queue to the call stack. Eventloop repeats this task like a
+                    loop.</strong>
                 </div>
               </div>
             </div>
@@ -115,12 +122,16 @@
                   <p>Local storage is the set of data that is permanently stored in the local store in the browser. The
                     data will remain in the browser until the data is deleted by manually or using Javascript. The data
                     is set as key and value. A maximum of 5 to 10 MB of data can be stored
-                    in local storage.
+                    in local storage. there are four method to data read and write. getItem() method use to read data
+                    from loacal storage. setItem() method use to set new data. To delete specific data use removeitem()
+                    method. clear() method use to clear all local storage data.
                     <br><br>
                     Session storage is the set of data in a browser session and the data is deleted when the browser
                     closes or the
                     page session ends. Here also the data is set as key and value. Session storage can store a maximum
-                    of 5 MB of data.
+                    of 5 MB of data. There are also four way to read and write data. getItem() method use to read data
+                    from session storage. setItem() method use to set new data. To delete specific data use removeitem()
+                    method. clear() method use to clear all session storage data.
                   </p>
                 </div>
               </div>
